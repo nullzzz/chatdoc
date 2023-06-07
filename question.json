@@ -1,0 +1,16 @@
+{
+  "keyword1": "关键词1",
+  "keyword2": "关键词2",
+  "title": "一种{@keyword1}方法",
+  "domain": "{@keyword2}",
+  "domain_detail": "一种{@keyword2}方法",
+  "background": [
+    "{@keyword2}的重要意义",
+    "现有{@keyword2}的3个不足之处",
+    "{@keyword1}的3个优势"
+  ],
+  "abstract": "将{@keyword1}总结为100个字",
+  "effect": "{@keyword1}的3个优势",
+  "overall": "将{@keyword1}总结为50个字",
+  "methods_filename": "question.txt"
+}
