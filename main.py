@@ -8,7 +8,7 @@ from general import InfoTab
 from info import sep, qa_bot
 from picture import Picture
 from query import Query
-from operator import Operator
+from my_operator import Operator
 
 
 class Window(QMainWindow):
@@ -91,6 +91,7 @@ class Window(QMainWindow):
                 self.warning("缺少API KEY")
                 return False
             os.environ["OPENAI_API_KEY"] = key
+        op
         return True
 
     def generate_picture(self):

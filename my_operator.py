@@ -1,7 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-from PyQt5.QtWidgets import QWidget, QTextEdit, QPushButton, QGridLayout, QLabel, QGroupBox, QVBoxLayout, \
-    QComboBox
+from PyQt5.QtWidgets import QWidget, QTextEdit, QPushButton, QGridLayout, QLabel, QGroupBox, QVBoxLayout, QComboBox
 
 from info import qa_bot
 from query import Query
@@ -20,6 +19,8 @@ class QABox(QGroupBox):
 
         self.question = QTextEdit()
         self.answer = QTextEdit()
+
+        self.update_bt = QPushButton("保存修改")
 
         if box_name == "分步骤":
             self.mutil_qa = True
@@ -70,6 +71,12 @@ class QABox(QGroupBox):
         if self.mutil_qa:
             self.qa_selector.currentIndexChanged.connect(self.changeQA)
 
+        self.update_bt.clicked.connect(self.updateQA)
+
+    def updateQA(self):
+        # todo: 将界面修改的内容保存到QA Manager中
+        ...
+
     def changeQA(self, index: int):
         if index < 0:
             return
@@ -95,6 +102,7 @@ class QABox(QGroupBox):
 
         layout.addWidget(self.question)
         layout.addWidget(self.answer)
+        layout.addWidget(self.update_bt)
 
         self.setLayout(layout)
 
